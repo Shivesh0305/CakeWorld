@@ -1,0 +1,583 @@
+{
+  "brand_identity": {
+    "name": "Cake World Bakery",
+    "location": "Bengaluru, Karnataka, India (Indiranagar • Lavelle Road • Koramangala)",
+    "concept": "Haute patisserie and artisanal bakehouse crafting bespoke celebration cakes, single-origin dark chocolate gateaux, and slow-fermented viennoiserie with seasonal South Indian botanicals and high-altitude berries.",
+    "emotional_archetype": "ARCHETYPE 1 + 5 FUSION: Organic Earthy Warmth meets Velvet Luxury",
+    "core_mood": "Warm, indulgent, tactile, appetizing, architectural, and sensually rich.",
+    "primary_conversion_action": "WhatsApp Direct Ordering with custom pre-filled message generator (wa.me)",
+    "secondary_conversion_action": "Direct Phone Call to Master Bakehouse Dispatch (tel:)"
+  },
+  "color_palette_roles": {
+    "philosophy": "Strict 5-role appetite palette balancing cream dairy silk, rich cacao depth, and vibrant cherry acidity.",
+    "roles": {
+      "role_1_canvas_cream": {
+        "hex": "#FAF5EE",
+        "name": "Chantilly Cream / Unbleached Parchment",
+        "tailwind_class": "bg-[#FAF5EE]",
+        "usage": "Primary page background, high-breathability negative space, warm light canvas that avoids sterile digital pure white (#FFFFFF)."
+      },
+      "role_2_ganache_noir": {
+        "hex": "#1E130D",
+        "name": "70% Valrhona Ganache / Espresso Noir",
+        "tailwind_class": "text-[#1E130D] bg-[#1E130D]",
+        "usage": "Primary headline typography, solid anchor surfaces, high-contrast footer, and sharp structural frames. Never use pure black (#000000)."
+      },
+      "role_3_morello_cherry": {
+        "hex": "#A61C2E",
+        "name": "Ripe Morello Cherry Red",
+        "tailwind_class": "bg-[#A61C2E] text-[#A61C2E] border-[#A61C2E]",
+        "hover_hex": "#881323",
+        "usage": "Primary kinetic triggers, WhatsApp CTA buttons, highlight tags, notification badges, and focal appetite accents."
+      },
+      "role_4_toasted_praline": {
+        "hex": "#D9C5B2",
+        "name": "Toasted Almond Praline",
+        "tailwind_class": "border-[#D9C5B2] bg-[#D9C5B2]/20 text-[#6B5140]",
+        "usage": "1px structural grid lines, subtle divider borders, badge outlines, and gentle background cards."
+      },
+      "role_5_bourbon_caramel": {
+        "hex": "#D49B55",
+        "name": "Salted Butter Caramel / Bourbon Gold",
+        "tailwind_class": "text-[#D49B55] bg-[#D49B55]/15 border-[#D49B55]",
+        "usage": "Tasting notes, star ratings, chef selection badges, award stamps, and pricing highlights."
+      }
+    },
+    "supporting_neutrals": {
+      "surface_elevated_light": "#F3ECE0",
+      "surface_elevated_dark": "#2C1D15",
+      "text_muted_warm": "#7A685A",
+      "text_inverse_cream": "#FAF5EE"
+    }
+  },
+  "typography": {
+    "font_pairings": {
+      "headline_display": {
+        "family": "Playfair Display, Bodoni Moda, serif",
+        "import": "@fontsource-variable/playfair-display",
+        "css_font_family": "'Playfair Display Variable', 'Bodoni Moda', serif",
+        "character": "High-contrast editorial serif, dramatic italic swashes, rich luxury tone reminiscent of European culinary monographs.",
+        "usage": "All H1, H2, H3 headings, manifesto quotes, signature cake titles, and editorial pullouts."
+      },
+      "body_technical_ui": {
+        "family": "Outfit, Cabinet Grotesk, sans-serif",
+        "import": "@fontsource-variable/outfit",
+        "css_font_family": "'Outfit Variable', 'Cabinet Grotesk', sans-serif",
+        "character": "Geometric clarity, open apertures, clean numerals for Indian Rupee pricing (₹), crisp small caps for metadata.",
+        "usage": "Body paragraphs, ingredient lists, weights, pricing, button CTAs, navigation links, and badges."
+      }
+    },
+    "scale_hierarchy": {
+      "h1_hero": "text-4xl sm:text-5xl lg:text-6xl font-serif font-normal tracking-tight leading-[1.08]",
+      "h2_section": "text-2xl sm:text-3xl lg:text-4xl font-serif font-normal tracking-tight leading-tight",
+      "h3_subsection": "text-xl sm:text-2xl font-serif font-medium leading-snug",
+      "h4_card_title": "text-lg sm:text-xl font-serif font-medium",
+      "body_lead": "text-base sm:text-lg font-sans text-[#7A685A] leading-relaxed",
+      "body_regular": "text-sm sm:text-base font-sans text-[#7A685A] leading-relaxed",
+      "overline_label": "text-xs font-sans uppercase font-bold tracking-[0.2em] text-[#A61C2E]",
+      "price_highlight": "text-xl sm:text-2xl font-sans font-semibold tracking-tight text-[#1E130D]"
+    },
+    "rules": [
+      "BANNED: Never use Inter, Roboto, or Arial for headings.",
+      "Never exceed text-6xl for hero titles to prevent visual blowout.",
+      "Pair bold serif titles with generous line-height on body text (leading-relaxed).",
+      "Use tabular figures for pricing and weights to maintain vertical alignment."
+    ]
+  },
+  "responsive_layouts_system": {
+    "desktop_1440px": {
+      "container": "max-w-7xl mx-auto px-8 lg:px-12",
+      "grid_strategy": "Tetris Grid (Mode A) with 12-column Swiss architecture, intentional asymmetric offsets, 1px praline dividing borders, and negative breathing space.",
+      "hero_layout": "Asymmetric 7:5 split. Left: Editorial stacked headline with line-reveal stagger, live atelier status pill, and dual action CTAs. Right: Dominant hero cake frame with floating chef badge and seasonal ingredients overlay.",
+      "menu_layout": "3-column staggered bento grid with featured hero cake occupying 2 columns and 2 rows.",
+      "manifesto_layout": "4-column horizontal chapter spread with numbered chapter markers (01-04) and continuous top praline border."
+    },
+    "mobile_390px": {
+      "container": "w-full px-5",
+      "grid_strategy": "Single column stacked editorial narrative, maintaining vertical rhythm with 48px to 64px section gaps.",
+      "image_constraints": "max-h-[60vh] object-cover rounded-2xl",
+      "touch_targets": "Minimum 48px height with full-width primary CTA buttons.",
+      "sticky_bottom_bar": {
+        "enabled": true,
+        "classes": "fixed bottom-0 left-0 right-0 z-40 bg-[#FAF5EE]/95 backdrop-blur-md border-t border-[#D9C5B2] p-3 flex items-center justify-between gap-3 shadow-lg",
+        "primary_cta": "Full-width flex-1 bg-[#A61C2E] hover:bg-[#881323] text-white py-3 px-4 rounded-xl font-medium text-sm flex items-center justify-center gap-2",
+        "secondary_cta": "p-3 border border-[#D9C5B2] rounded-xl text-[#1E130D] bg-white flex items-center justify-center"
+      }
+    }
+  },
+  "sections_architecture": [
+    {
+      "section_id": "top_navigation",
+      "component_name": "BakeryHeader",
+      "data_testid": "main-navigation-bar",
+      "style": "Sticky Crystal Glassmorphism with cream background (bg-[#FAF5EE]/85 backdrop-blur-md border-b border-[#D9C5B2]/60 z-50)",
+      "elements": [
+        {
+          "name": "Brand Wordmark",
+          "data_testid": "brand-logo-link",
+          "markup": "<span class='font-serif text-2xl tracking-tight text-[#1E130D]'>Cake World<span class='text-[#A61C2E]'>.</span></span><span class='block text-[10px] tracking-[0.25em] font-sans uppercase text-[#7A685A]'>Bengaluru Patisserie</span>"
+        },
+        {
+          "name": "Navigation Links (Desktop)",
+          "items": [
+            { "label": "Signature Cakes", "href": "#menu", "data_testid": "nav-link-menu" },
+            { "label": "Bakehouse Manifesto", "href": "#manifesto", "data_testid": "nav-link-manifesto" },
+            { "label": "Custom Tiers", "href": "#custom-orders", "data_testid": "nav-link-custom" },
+            { "label": "Ateliers & Timings", "href": "#locations", "data_testid": "nav-link-locations" },
+            { "label": "Tasting Reviews", "href": "#reviews", "data_testid": "nav-link-reviews" }
+          ]
+        },
+        {
+          "name": "Order Action",
+          "data_testid": "nav-whatsapp-cta",
+          "label": "Order via WhatsApp",
+          "classes": "bg-[#A61C2E] hover:bg-[#881323] text-[#FAF5EE] text-xs uppercase tracking-widest font-semibold px-5 py-2.5 rounded-full transition-all duration-200 shadow-sm"
+        }
+      ]
+    },
+    {
+      "section_id": "kinetic_hero",
+      "component_name": "KineticHeroSection",
+      "data_testid": "hero-section",
+      "layout": "Grid 12 cols (Desktop 7:5, Mobile stacked)",
+      "features": {
+        "live_status_badge": {
+          "data_testid": "live-baking-status-badge",
+          "text": "LIVE FROM ATELIER: 48-HR SOURDOUGH BATCH PROOFING • NEXT DISPATCH 11:30 IST",
+          "classes": "inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#D49B55]/15 border border-[#D49B55]/40 text-[#1E130D] text-xs font-medium tracking-wide mb-6"
+        },
+        "kinetic_headline": {
+          "data_testid": "hero-headline",
+          "lines": [
+            "Architectural Gateaux.",
+            "Dark Single-Origin Cacao.",
+            "Crafted in Bengaluru."
+          ],
+          "motion_style": "CSS line-by-line reveal using staggered translate-y and opacity transitions with cubic-bezier(0.16, 1, 0.3, 1)."
+        },
+        "sub_editorial_text": {
+          "data_testid": "hero-subheading",
+          "text": "Elevating Bengaluru's celebratory moments through slow-fermentation, 70% Western Ghats chocolate ganache, and hand-plucked Morello cherries. Baked daily in limited batches for discerning palates."
+        },
+        "dual_cta_group": {
+          "primary_whatsapp": {
+            "data_testid": "hero-whatsapp-order-btn",
+            "label": "Order Fresh via WhatsApp",
+            "href": "https://wa.me/918049520000?text=Hello%20Cake%20World%2C%20I%20would%20like%20to%20reserve%20a%20fresh%20signature%20cake.",
+            "classes": "bg-[#A61C2E] hover:bg-[#881323] text-white px-7 py-4 rounded-full font-semibold text-sm tracking-wide shadow-md hover:shadow-lg transition-all transform hover:-translate-y-0.5 flex items-center justify-center gap-2"
+          },
+          "secondary_call": {
+            "data_testid": "hero-direct-call-btn",
+            "label": "Call Bakehouse Concierge",
+            "href": "tel:+918049520000",
+            "classes": "border border-[#1E130D]/20 hover:border-[#1E130D] text-[#1E130D] px-6 py-4 rounded-full font-medium text-sm tracking-wide bg-transparent hover:bg-[#1E130D]/5 transition-all flex items-center justify-center gap-2"
+          }
+        },
+        "hero_image_frame": {
+          "image_url": "https://images.unsplash.com/photo-1606890737304-57a1ca8a5b62?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2OTV8MHwxfHNlYXJjaHwxfHxhcnRpc2FuJTIwY2hvY29sYXRlJTIwY2FrZSUyMGNoZXJyeXxlbnwwfHx8fDE3ODc4ODA3NzZ8MA&ixlib=rb-4.1.0&q=85",
+          "alt": "The Signature Obsidian Forest Gateau with dark chocolate drip and Morello cherries",
+          "data_testid": "hero-cake-image",
+          "floating_badge": {
+            "data_testid": "hero-award-badge",
+            "text": "Gold Winner • Bengaluru Culinary Arts 2026",
+            "classes": "absolute -bottom-6 -left-6 bg-[#FAF5EE] border border-[#D9C5B2] p-4 rounded-2xl shadow-xl max-w-xs flex items-center gap-3"
+          }
+        }
+      }
+    },
+    {
+      "section_id": "editorial_ribbon_marquee",
+      "component_name": "EditorialMarquee",
+      "data_testid": "editorial-marquee-ribbon",
+      "speed": "35s linear infinite drift",
+      "style": "bg-[#1E130D] text-[#FAF5EE] py-4 border-y border-[#D9C5B2]/20 overflow-hidden select-none",
+      "items": [
+        "48-HOUR COLD PROOF FERMENTATION",
+        "•",
+        "70% SINGLE-ORIGIN COORG CACAO",
+        "•",
+        "ORGANIC NILGIRI MORELLO CHERRIES",
+        "•",
+        "ZERO ARTIFICIAL EMULSIFIERS",
+        "•",
+        "HAND-CRAFTED DAILY IN BENGALURU",
+        "•",
+        "BESPOKE MULTI-TIER ARCHITECTURE",
+        "•",
+        "FRENCH NORMANDY CULTURED BUTTER",
+        "•"
+      ]
+    },
+    {
+      "section_id": "numbered_manifesto",
+      "component_name": "BakehouseManifesto",
+      "data_testid": "manifesto-section",
+      "heading": "The Bakehouse Principles",
+      "subheading": "Four non-negotiable standards that distinguish artisanal pastry from commercial confectionery.",
+      "chapters": [
+        {
+          "number": "01",
+          "data_testid": "manifesto-chapter-01",
+          "title": "The 48-Hour Cold Ferment",
+          "description": "Our sourdough sponge and brioche sponges undergo extended slow fermentation at 4°C. This allows wild microflora to unlock deep nutty aromatics and tender gluten structure without synthetic improvers."
+        },
+        {
+          "number": "02",
+          "data_testid": "manifesto-chapter-02",
+          "title": "Karnataka Terroir & Single-Origin Cacao",
+          "description": "We source cacao pods directly from agro-forest estates in Coorg and Western Ghats, roasted at low temperatures to retain natural fruity acidity, red berry notes, and earthy wood tannins."
+        },
+        {
+          "number": "03",
+          "data_testid": "manifesto-chapter-03",
+          "title": "Wild Botanicals & Nilgiri Cherries",
+          "description": "No artificial syrups or canned glazes. Our preserves are simmered from organic Morello cherries and sour cherries cultivated in the Ooty highlands, infused with wild vanilla from Wayanad."
+        },
+        {
+          "number": "04",
+          "data_testid": "manifesto-chapter-04",
+          "title": "Architectural Pastry Design",
+          "description": "Each tier is engineered with precision geometry, structural chocolate ganache pillars, and hand-tempered feather shards. Visual tension meets delicate, melt-in-mouth mouthfeel."
+        }
+      ]
+    },
+    {
+      "section_id": "signature_menu_presentation",
+      "component_name": "SignatureMenuGrid",
+      "data_testid": "signature-menu-section",
+      "heading": "Signature Gateaux & Seasonal Creations",
+      "subheading": "Freshly baked daily in strictly limited batches. Select weight and order instantly via WhatsApp.",
+      "filter_categories": ["All Creations", "Single-Origin Chocolate", "Seasonal Fruit & Berry", "Cheesecake & Silk", "Celebration Tiers"],
+      "cakes": [
+        {
+          "id": "obsidian-forest",
+          "data_testid": "cake-card-obsidian-forest",
+          "title": "The Obsidian Forest Gateau",
+          "tagline": "70% Coorg dark ganache, spiced Morello cherry compote, Madagascar vanilla chantilly",
+          "image_url": "https://images.unsplash.com/photo-1606890737304-57a1ca8a5b62?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2OTV8MHwxfHNlYXJjaHwxfHxhcnRpc2FuJTIwY2hvY29sYXRlJTIwY2FrZSUyMGNoZXJyeXxlbnwwfHx8fDE3ODc4ODA3NzZ8MA&ixlib=rb-4.1.0&q=85",
+          "price_inr": 1450,
+          "weights": ["0.5 kg", "1.0 kg", "2.0 kg"],
+          "dietary": ["Eggless Available", "100% Belgian Cocoa", "Contains Nuts (Optional)"],
+          "badge": "Signature Bestseller",
+          "is_featured": true
+        },
+        {
+          "id": "mysuru-vanilla-cloud",
+          "data_testid": "cake-card-mysuru-vanilla-cloud",
+          "title": "Mysuru Vanilla Chantilly Cloud",
+          "tagline": "Light chiffon sponge soaked in wild honeycomb syrup, layered with Tahitian vanilla bean mousse",
+          "image_url": "https://images.unsplash.com/photo-1715533482956-4a8a362b863c?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2OTV8MHwxfHNlYXJjaHwzfHxhcnRpc2FuJTIwY2hvY29sYXRlJTIwY2FrZSUyMGNoZXJyeXxlbnwwfHx8fDE3ODc4ODA3NzZ8MA&ixlib=rb-4.1.0&q=85",
+          "price_inr": 1250,
+          "weights": ["0.5 kg", "1.0 kg"],
+          "dietary": ["100% Pure Butter", "Eggless Option"],
+          "badge": "Subtle & Floral",
+          "is_featured": false
+        },
+        {
+          "id": "espresso-tiramisu-silk",
+          "data_testid": "cake-card-espresso-tiramisu",
+          "title": "Chikmagalur Roast Tiramisu Silk",
+          "tagline": "Savoiardi soaked in double-shot Arabica roast, whipped Italian mascarpone, dusted with dark cacao nibs",
+          "image_url": "https://images.unsplash.com/photo-1605807646983-377bc5a76493?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2OTV8MHwxfHNlYXJjaHwyfHxhcnRpc2FuJTIwY2hvY29sYXRlJTIwY2FrZSUyMGNoZXJyeXxlbnwwfHx8fDE3ODc4ODA3NzZ8MA&ixlib=rb-4.1.0&q=85",
+          "price_inr": 1650,
+          "weights": ["0.75 kg", "1.5 kg"],
+          "dietary": ["Caffeine Infused", "Contains Dairy"],
+          "badge": "Barista Special",
+          "is_featured": false
+        },
+        {
+          "id": "berry-rose-pistachio-opera",
+          "data_testid": "cake-card-berry-rose-opera",
+          "title": "Nilgiri Berry & Pistachio Opera",
+          "tagline": "Layers of Iranian pistachio joconde, Damascus rose buttercream, fresh raspberry gelee",
+          "image_url": "https://images.unsplash.com/photo-1583338917451-face2751d8d5?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzNTl8MHwxfHNlYXJjaHwzfHxsdXh1cnklMjBwYXN0cnklMjBiYWtlcnklMjBhZXN0aGV0aWN8ZW58MHx8fHwxNzg3ODgwNzc3fDA&ixlib=rb-4.1.0&q=85",
+          "price_inr": 1850,
+          "weights": ["0.8 kg", "1.6 kg"],
+          "dietary": ["Gluten-Friendly Sponge", "Real Fruit Gelee"],
+          "badge": "Chef's Exhibition",
+          "is_featured": false
+        },
+        {
+          "id": "salted-toffee-pecan-basque",
+          "data_testid": "cake-card-salted-basque",
+          "title": "Burnt Basque & Salted Bourbon Toffee",
+          "tagline": "Caramelized exterior with molten cream cheese center, drizzled with smoked fleur de sel toffee",
+          "image_url": "https://images.unsplash.com/photo-1620490448382-d2f51a08596f?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2OTV8MHwxfHNlYXJjaHw0fHxhcnRpc2FuJTIwY2hvY29sYXRlJTIwY2FrZSUyMGNoZXJyeXxlbnwwfHx8fDE3ODc4ODA3NzZ8MA&ixlib=rb-4.1.0&q=85",
+          "price_inr": 1390,
+          "weights": ["0.5 kg", "1.0 kg"],
+          "dietary": ["Molten Center", "Eggless Option"],
+          "badge": "Cult Favorite",
+          "is_featured": false
+        },
+        {
+          "id": "couture-wedding-tiers",
+          "data_testid": "cake-card-custom-tiers",
+          "title": "Bespoke Multi-Tier Celebration Architecture",
+          "tagline": "Custom 2-4 tier sculptured centerpieces designed in consultation with our Master Cake Artist.",
+          "image_url": "https://images.unsplash.com/photo-1670843840225-2ffcaf483c01?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA0MTJ8MHwxfHNlYXJjaHwyfHxwYXN0cnklMjBjaGVmJTIwZGVjb3JhdGluZyUyMGNha2V8ZW58MHx8fHwxNzg3ODgwNzgzfDA&ixlib=rb-4.1.0&q=85",
+          "price_inr": 4500,
+          "weights": ["3.0 kg+", "Custom Tiers"],
+          "dietary": ["Personalized Tasting Flight Included"],
+          "badge": "By Consultation",
+          "is_featured": true
+        }
+      ]
+    },
+    {
+      "section_id": "custom_whatsapp_order_builder",
+      "component_name": "InteractiveOrderCalculator",
+      "data_testid": "whatsapp-order-calculator",
+      "description": "Dynamic visual selector allowing guests to select a cake, choose weight/size, choose eggless preference, write a custom message on cake, and click a single primary button that opens WhatsApp with a pre-formatted order template.",
+      "fields": [
+        { "name": "Cake Flavor", "data_testid": "calc-flavor-select" },
+        { "name": "Weight/Tier", "data_testid": "calc-weight-select" },
+        { "name": "Dietary Preference", "data_testid": "calc-dietary-checkbox" },
+        { "name": "Custom Inscription / Date", "data_testid": "calc-inscription-input" },
+        { "name": "Delivery Atelier", "data_testid": "calc-location-select" }
+      ],
+      "submit_cta": {
+        "data_testid": "calc-whatsapp-submit-btn",
+        "label": "Send Order to WhatsApp Bakehouse Concierge",
+        "action_format": "https://wa.me/918049520000?text=Cake%20Order%3A%20[FLAVOR]%20-%20[WEIGHT]%20-%20Message%3A%20[INSCRIPTION]%20-%20Delivery%3A%20[LOCATION]"
+      }
+    },
+    {
+      "section_id": "patron_reviews",
+      "component_name": "TastingNotesReviews",
+      "data_testid": "reviews-section",
+      "heading": "Critique & Patron Acclaim",
+      "subheading": "Words from Bengaluru's culinary critics and celebratory gatherings.",
+      "reviews": [
+        {
+          "author": "Ananya Roy-Chowdhury",
+          "designation": "Culinary Editor, Bangalore Epicure",
+          "rating": 5,
+          "data_testid": "review-item-01",
+          "quote": "The Obsidian Forest is a triumph. The balance of 70% bitter Coorg chocolate against the sharp acidity of Morello cherries puts commercial bakeries to shame."
+        },
+        {
+          "author": "Vikramaditya Rao",
+          "designation": "Indiranagar Resident & Long-time Patron",
+          "rating": 5,
+          "data_testid": "review-item-02",
+          "quote": "We ordered a 3-tier custom gateau for our 25th anniversary. Ordering over WhatsApp was seamless, delivery on Lavelle Road was punctual, and the sponge was ethereal."
+        },
+        {
+          "author": "Pooja Hegde & Rohan Sen",
+          "designation": "Wedding Clients, Koramangala",
+          "rating": 5,
+          "data_testid": "review-item-03",
+          "quote": "Their Basque Cheesecake with burnt bourbon toffee has ruined every other cheesecake for us. Indulgent, unpretentious, and utterly world-class."
+        }
+      ]
+    },
+    {
+      "section_id": "bengaluru_ateliers_locations",
+      "component_name": "AtelierLocationsSection",
+      "data_testid": "ateliers-section",
+      "heading": "Visit Our Bengaluru Ateliers",
+      "subheading": "Experience the aroma of fresh bakes, view the master cake counter, or pick up your pre-ordered gateaux.",
+      "locations": [
+        {
+          "id": "indiranagar",
+          "name": "Indiranagar Flagship & Studio",
+          "data_testid": "atelier-indiranagar",
+          "address": "487, 100 Feet Road, HAL 2nd Stage, Indiranagar, Bengaluru 560038",
+          "hours": "08:00 AM – 11:00 PM IST (Daily)",
+          "phone": "+91 80 4952 0001",
+          "features": ["Live Pastry Counter", "Tasting Salon", "Curbside Pickup"]
+        },
+        {
+          "id": "lavelle-road",
+          "name": "Lavelle Road Boutique Atelier",
+          "data_testid": "atelier-lavelle-road",
+          "address": "22/1, Walton Road, Off Lavelle Road, Shanthala Nagar, Bengaluru 560001",
+          "hours": "09:00 AM – 10:30 PM IST (Daily)",
+          "phone": "+91 80 4952 0002",
+          "features": ["Champagne & Gateaux Pairing", "Valet Parking"]
+        },
+        {
+          "id": "koramangala",
+          "name": "Koramangala Bakehouse Lab",
+          "data_testid": "atelier-koramangala",
+          "address": "92, 5th Main, 4th Block, Koramangala, Bengaluru 560034",
+          "hours": "08:30 AM – 11:00 PM IST (Daily)",
+          "phone": "+91 80 4952 0003",
+          "features": ["Sourdough Dispatch", "Express Cake Pickups"]
+        }
+      ]
+    },
+    {
+      "section_id": "footer_monograph",
+      "component_name": "EditorialFooter",
+      "data_testid": "main-footer",
+      "style": "bg-[#1E130D] text-[#FAF5EE] pt-20 pb-12 border-t border-[#D9C5B2]/20",
+      "elements": {
+        "large_brand_title": {
+          "data_testid": "footer-brand-title",
+          "text": "Cake World.",
+          "classes": "font-serif text-5xl sm:text-7xl lg:text-8xl text-[#FAF5EE]/90 tracking-tighter mb-8 block select-none"
+        },
+        "quick_actions": {
+          "whatsapp_btn": {
+            "data_testid": "footer-whatsapp-order-btn",
+            "label": "Chat with Master Baker on WhatsApp",
+            "href": "https://wa.me/918049520000"
+          },
+          "call_btn": {
+            "data_testid": "footer-phone-call-btn",
+            "label": "Direct Phone Dispatch (+91 80 4952 0000)",
+            "href": "tel:+918049520000"
+          }
+        },
+        "copyright": "© 2026 Cake World Bakery Pvt Ltd. All rights reserved. Hand-crafted in Bengaluru."
+      }
+    }
+  ],
+  "motion_and_interactions_pure_css": {
+    "philosophy": "Zero framer-motion dependency. High-performance, butter-smooth native CSS keyframes and vanilla JS IntersectionObserver triggers.",
+    "keyframes": {
+      "line_reveal": "@keyframes lineReveal { from { transform: translateY(100%); opacity: 0; } to { transform: translateY(0); opacity: 1; } }",
+      "marquee_slide": "@keyframes marquee { 0% { transform: translateX(0%); } 100% { transform: translateX(-50%); } }",
+      "subtle_pulse_glow": "@keyframes softGlow { 0%, 100% { opacity: 0.3; transform: scale(1); } 50% { opacity: 0.6; transform: scale(1.05); } }"
+    },
+    "animation_classes": {
+      "hero_line_1": "animate-[lineReveal_0.8s_cubic-bezier(0.16,1,0.3,1)_0.1s_forwards]",
+      "hero_line_2": "animate-[lineReveal_0.8s_cubic-bezier(0.16,1,0.3,1)_0.25s_forwards]",
+      "hero_line_3": "animate-[lineReveal_0.8s_cubic-bezier(0.16,1,0.3,1)_0.4s_forwards]",
+      "marquee_track": "flex w-[200%] animate-[marquee_35s_linear_infinite] hover:[animation-play-state:paused]"
+    },
+    "micro_interactions": [
+      "Image Card Hover: scale-105 transition-transform duration-500 ease-out + subtle inner chocolate shadow.",
+      "CTA Button Hover: -translate-y-0.5 shadow-md shadow-[#A61C2E]/25 transition-all duration-200 active:translate-y-0.",
+      "Scroll Intersection: Observer adds 'is-visible' class removing translate-y-6 and opacity-0."
+    ]
+  },
+  "curated_media_and_image_prompts": {
+    "image_slots": [
+      {
+        "slot_id": "hero_signature_cake",
+        "description": "Dominant close-up hero shot of the 3-layer chocolate cake with rich cream, dark cherries, and red syrup glaze on a white porcelain platter.",
+        "url": "https://images.unsplash.com/photo-1606890737304-57a1ca8a5b62?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2OTV8MHwxfHNlYXJjaHwxfHxhcnRpc2FuJTIwY2hvY29sYXRlJTIwY2FrZSUyMGNoZXJyeXxlbnwwfHx8fDE3ODc4ODA3NzZ8MA&ixlib=rb-4.1.0&q=85",
+        "generation_prompt": "Editorial food photography of a luxury artisanal chocolate layer cake with dark glossy ganache drip and plump fresh Morello cherries with stems on top. Warm natural bakery sunlight from left window, creamy parchment background, shallow depth of field, 85mm f/1.8 lens, Hasselblad medium format color grading --ar 4:5 --v 6.0"
+      },
+      {
+        "slot_id": "menu_cake_slice_cherry",
+        "description": "Close-up macro slice of dark chocolate cake with white cream layers and a single glossy red cherry.",
+        "url": "https://images.unsplash.com/photo-1620490448382-d2f51a08596f?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2OTV8MHwxfHNlYXJjaHw0fHxhcnRpc2FuJTIwY2hvY29sYXRlJTIwY2FrZSUyMGNoZXJyeXxlbnwwfHx8fDE3ODc4ODA3NzZ8MA&ixlib=rb-4.1.0&q=85",
+        "generation_prompt": "Macro shot of a slice of decadent multi-layer Valrhona chocolate cake with whipped Chantilly cream and tart cherry compote filling, single candied cherry on top with stem, dramatic dark espresso mood, velvet texture --ar 4:3"
+      },
+      {
+        "slot_id": "menu_whole_gateau_chiffon",
+        "description": "Whole chocolate drip cake on white stand in warm artisanal kitchen.",
+        "url": "https://images.unsplash.com/photo-1715533482956-4a8a362b863c?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2OTV8MHwxfHNlYXJjaHwzfHxhcnRpc2FuJTIwY2hvY29sYXRlJTIwY2FrZSUyMGNoZXJyeXxlbnwwfHx8fDE3ODc4ODA3NzZ8MA&ixlib=rb-4.1.0&q=85",
+        "generation_prompt": "Appetizing whole celebration cake with white frosting and dark chocolate drip, topped with glazed wild cherries on a marble counter in a luxury boutique patisserie --ar 4:3"
+      },
+      {
+        "slot_id": "menu_pastry_glass_display",
+        "description": "Boutique bakery display counter with assorted gourmet fruit tarts, chocolate cakes, and berry gateaux under warm ambient lighting.",
+        "url": "https://images.unsplash.com/photo-1583338917451-face2751d8d5?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzNTl8MHwxfHNlYXJjaHwzfHxsdXh1cnklMjBwYXN0cnklMjBiYWtlcnklMjBhZXN0aGV0aWN8ZW58MHx8fHwxNzg3ODgwNzc3fDA&ixlib=rb-4.1.0&q=85",
+        "generation_prompt": "High-end French patisserie glass vitrine displaying rows of glossy ruby berry tarts, chocolate opera cakes, and delicate pastries, warm glowing interior lighting, luxury boutique aesthetic --ar 16:9"
+      },
+      {
+        "slot_id": "master_pastry_chef_crafting",
+        "description": "Artisan pastry chef carefully slicing and garnishing a fresh celebration cake with a palette knife in a stainless steel bakehouse kitchen.",
+        "url": "https://images.unsplash.com/photo-1670843840225-2ffcaf483c01?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA0MTJ8MHwxfHNlYXJjaHwyfHxwYXN0cnklMjBjaGVmJTIwZGVjb3JhdGluZyUyMGNha2V8ZW58MHx8fHwxNzg3ODgwNzgzfDA&ixlib=rb-4.1.0&q=85",
+        "generation_prompt": "Cinematic side-profile photo of a master pastry chef in crisp linen apron piping delicate cream rosettes onto a multi-tier bespoke celebration cake, flour dust in air, morning sunlight, documentary culinary craft --ar 3:4"
+      },
+      {
+        "slot_id": "atelier_interior_storefront",
+        "description": "Warm ambient bakery storefront with wooden shelves filled with artisan bakes and warm golden lighting.",
+        "url": "https://images.unsplash.com/photo-1587241321921-91a834d6d191?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzNTl8MHwxfHNlYXJjaHwyfHxsdXh1cnklMjBwYXN0cnklMjBiYWtlcnklMjBhZXN0aGV0aWN8ZW58MHx8fHwxNzg3ODgwNzc3fDA&ixlib=rb-4.1.0&q=85",
+        "generation_prompt": "Architectural interior photography of an upscale Bengaluru bakery atelier, warm oak shelving, fluted glass partitions, brass accents, warm ambient lighting, peaceful morning atmosphere --ar 16:9"
+      }
+    ]
+  },
+  "testing_attributes_registry": {
+    "navigation": [
+      "main-navigation-bar",
+      "brand-logo-link",
+      "nav-link-menu",
+      "nav-link-manifesto",
+      "nav-link-custom",
+      "nav-link-locations",
+      "nav-link-reviews",
+      "nav-whatsapp-cta"
+    ],
+    "hero": [
+      "hero-section",
+      "live-baking-status-badge",
+      "hero-headline",
+      "hero-subheading",
+      "hero-whatsapp-order-btn",
+      "hero-direct-call-btn",
+      "hero-cake-image",
+      "hero-award-badge"
+    ],
+    "marquee": [
+      "editorial-marquee-ribbon"
+    ],
+    "manifesto": [
+      "manifesto-section",
+      "manifesto-chapter-01",
+      "manifesto-chapter-02",
+      "manifesto-chapter-03",
+      "manifesto-chapter-04"
+    ],
+    "menu": [
+      "signature-menu-section",
+      "cake-card-obsidian-forest",
+      "cake-card-mysuru-vanilla-cloud",
+      "cake-card-espresso-tiramisu",
+      "cake-card-berry-rose-opera",
+      "cake-card-salted-basque",
+      "cake-card-custom-tiers"
+    ],
+    "order_calculator": [
+      "whatsapp-order-calculator",
+      "calc-flavor-select",
+      "calc-weight-select",
+      "calc-dietary-checkbox",
+      "calc-inscription-input",
+      "calc-location-select",
+      "calc-whatsapp-submit-btn"
+    ],
+    "reviews": [
+      "reviews-section",
+      "review-item-01",
+      "review-item-02",
+      "review-item-03"
+    ],
+    "locations": [
+      "ateliers-section",
+      "atelier-indiranagar",
+      "atelier-lavelle-road",
+      "atelier-koramangala"
+    ],
+    "footer": [
+      "main-footer",
+      "footer-brand-title",
+      "footer-whatsapp-order-btn",
+      "footer-phone-call-btn"
+    ]
+  },
+  "instructions_to_main_agent": [
+    "1. Read this entire JSON guideline file (/app/design_guidelines.json) before generating frontend code in /app/frontend.",
+    "2. Strict Palette Enforcement: Use the 5 primary roles (#FAF5EE cream canvas, #1E130D ganache noir text/anchors, #A61C2E cherry red kinetic CTAs, #D9C5B2 praline borders, #D49B55 caramel accents). Never revert to default SaaS blue (#3B82F6), generic cool slate, or pure black (#000000).",
+    "3. Typography: Load Playfair Display / Bodoni Moda for all headers/titles and Outfit / Cabinet Grotesk for body and buttons. Strictly observe H1 ceiling at text-4xl sm:text-5xl lg:text-6xl.",
+    "4. WhatsApp Ordering Flow: Ensure all WhatsApp buttons have data-testid attributes and dynamic link generation pointing to https://wa.me/918049520000 with pre-filled cake details.",
+    "5. Motion Rule: Implement smooth CSS keyframe animations and IntersectionObserver reveals without installing heavy framer-motion dependencies.",
+    "6. Hero Image Overlay Rule: Never place heavy dark overlays over the hero cake photo. Use clean contrast framing, delicate drop shadows, and soft ambient warmth.",
+    "7. Testing: Ensure all data-testid attributes listed in testing_attributes_registry are attached directly to their respective HTML/React elements."
+  ],
+  "UNIVERSAL GUIDELINES FOR MAIN AGENT": {
+    "design_anti_patterns_to_avoid": [
+      "No generic centered templates or cookie-cutter SaaS layouts.",
+      "No AI emojis (🤖, 🧠, 💡) used as functional icons. Use clean Lucide SVG icons (Phone, MessageCircle, Clock, MapPin, Sparkles, Star, ShieldCheck, ChevronRight).",
+      "No flat unstyled inputs. Inputs in the WhatsApp order calculator must have warm parchment backgrounds, 1px praline borders, and cherry focus rings.",
+      "No full-screen gradients. Texture, clean negative space, and fine 1px border lines create true editorial luxury."
+    ],
+    "responsiveness": "Ensure flawless responsiveness from 390px (mobile viewport with sticky bottom WhatsApp action bar) to 1440px+ (desktop 12-col Swiss Tetris grid).",
+    "data_testid_policy": "All interactive buttons, dropdowns, inputs, cake cards, and location badges must strictly include specified kebab-case data-testid tags."
+  }
+}
