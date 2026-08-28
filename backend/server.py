@@ -1,75 +1,77 @@
 from contextlib import asynccontextmanager
-from datetime import datetime, timezone
-import logging
-import os
-from pathlib import Path
-import uuid
-
+from fastapi import FastAPI, APIRouter
 from dotenv import load_dotenv
-from fastapi import APIRouter, FastAPI
-from pydantic import BaseModel, Field
 from starlette.middleware.cors import CORSMiddleware
+import os
+import logging
+from pathlib import Path
+from pydantic import BaseModel, Field
+from typing import List
+import uuid
+from datetime import datetime
+
 
 ROOT_DIR = Path(__file__).parent
-load_dotenv(ROOT_DIR / ".env")
+load_dotenv(ROOT_DIR / '.env')
 
+# MongoDB connection
 from lib.db import client, db
-from models.base import BaseDocument
-from routers.auth import router as auth_router, seed_admin
-from routers.menu import router as menu_router, seed_menu
 
 
+# Startup runs before the yield, shutdown after it. Add your own setup/teardown here.
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    await seed_admin()
-    await seed_menu()
     yield
     client.close()
 
 
+# Create the main app without a prefix
 app = FastAPI(lifespan=lifespan)
+
+# Create a router with the /api prefix
 api_router = APIRouter(prefix="/api")
 
 
-class StatusCheck(BaseDocument):
+# Define Models
+class StatusCheck(BaseModel):
+    id: str = Field(default_factory=lambda: str(uuid.uuid4()))
     client_name: str
-    timestamp: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
-
+    timestamp: datetime = Field(default_factory=datetime.utcnow)
 
 class StatusCheckCreate(BaseModel):
     client_name: str
 
-
+# Add your routes to the router instead of directly to app
 @api_router.get("/")
 async def root():
     return {"message": "Hello World"}
 
-
 @api_router.post("/status", response_model=StatusCheck)
 async def create_status_check(input: StatusCheckCreate):
-    status_obj = StatusCheck(**input.model_dump())
-    await db.status_checks.insert_one(status_obj.to_mongo())
+    status_dict = input.model_dump()
+    status_obj = StatusCheck(**status_dict)
+    _ = await db.status_checks.insert_one(status_obj.model_dump())
     return status_obj
 
-
-@api_router.get("/status", response_model=list[StatusCheck])
+@api_router.get("/status", response_model=List[StatusCheck])
 async def get_status_checks():
-    documents = await db.status_checks.find().to_list(1000)
-    return [StatusCheck.from_mongo(document) for document in documents]
+    status_checks = await db.status_checks.find().to_list(1000)
+    return [StatusCheck(**status_check) for status_check in status_checks]
 
-
+# Include the router in the main app
 app.include_router(api_router)
-app.include_router(auth_router, prefix="/api")
-app.include_router(menu_router, prefix="/api")
 
-origins = [origin.strip() for origin in os.environ.get("CORS_ORIGINS", "http://localhost:3000").split(",") if origin.strip()]
 app.add_middleware(
     CORSMiddleware,
     allow_credentials=True,
-    allow_origins=origins,
+    allow_origins=os.environ.get('CORS_ORIGINS', '*').split(','),
     allow_methods=["*"],
-    allow_headers=["*"],
+    allow_headers=["*"]
 )
 
-logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(name)s - %(levelname)s - %(message)s")
+# Configure logging
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+)
 logger = logging.getLogger(__name__)

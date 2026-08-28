@@ -50,22 +50,3 @@ Build a premium, warm, conversion-focused website for Cake World Bakery in Mudda
 2. Validate the menu and pricing copy with the bakery owner.
 3. Decide whether the WhatsApp enquiry is enough or needs a connected ordering system.
 
-## Feature addition 2026-08-28
-- Added a protected owner menu editor at `/owner/login` and `/owner/menu` with JWT email/password authentication, live menu item management, visibility toggles, prices, ordering, English/Kannada fields, and idempotent MongoDB seeding.
-- Public menu cards now load from `/api/menu`, expose owner-managed prices, and use a typographic live-counter rail and counter callout to make the spacious editorial layout feel intentional.
-- Added a full English/Kannada visitor toggle persisted in the browser, including navigation, headings, menu labels, order form, review copy, store details and footer.
-- Added an embedded Google Maps view for the supplied Cake World Bakery address alongside the existing directions link.
-- Verification completed: authenticated login/me/admin menu CRUD/hide/logout flow, public menu response, frontend build, language toggle, owner editor render, and desktop/mobile layout assertions.
-
-## Updated backlog
-### P0
-- Replace generated menu imagery with approved real bakery photos.
-- Set the current per-item prices and availability in the owner editor.
-
-### P1
-- Add password reset and owner audit history if more staff accounts are introduced.
-- Confirm whether Google Maps usage should move from the no-key embedded view to a restricted Maps API key.
-
-### P2
-- Add editable review content and a Kannada review management workflow.
-- Owner handoff uses the test credentials documented in `/app/memory/test_credentials.md`.
