@@ -34,10 +34,13 @@ const navLinks = [
 ];
 
 const marqueeItems = [
-  "BIRTHDAY CAKES",
-  "SWEETS & PASTRIES",
-  "CHICKEN BURGER + FRIES",
-  "VEG SANDWICHES",
+  "JUICES",
+  "TEA",
+  "SNACKS",
+  "PUFFS",
+  "COLD DRINKS",
+  "CHOCOLATES",
+  "CHAAT",
   "TAKEAWAY IN MUDDANAHALLI",
 ];
 
@@ -116,6 +119,24 @@ const menuItems: MenuItem[] = [
     alt: "Baker piping cream onto a layered celebration cake",
   },
 ];
+
+type CounterCategory = {
+  id: string;
+  name: string;
+  description: string;
+  marker: string;
+};
+
+const counterCategories: CounterCategory[] = [
+  { id: "juices", name: "Juices", description: "Bright, refreshing pours for a quick lift or a slow afternoon.", marker: "01" },
+  { id: "tea", name: "Tea", description: "A familiar hot cup for the pause between one thing and the next.", marker: "02" },
+  { id: "snacks", name: "Snacks", description: "Easy bakery-counter bites when you want something savoury.", marker: "03" },
+  { id: "puffs", name: "Puffs", description: "Flaky, warm and made for the first bite on the way home.", marker: "04" },
+  { id: "cold-drinks", name: "Cold drinks", description: "Chilled favourites to pair with a pastry, puff or chaat.", marker: "05" },
+  { id: "chocolates", name: "Chocolates", description: "A little cocoa comfort, wrapped up for gifting or keeping.", marker: "06" },
+  { id: "chaat", name: "Chaat", description: "Tangy, crunchy and full of the kind of flavour that wakes you up.", marker: "07" },
+];
+
 
 const reviews = [
   {
@@ -349,40 +370,51 @@ function MenuCard({ item, index }: { item: MenuItem; index: number }) {
   );
 }
 
-function MenuSection() {
-  const chickenHref = createWhatsAppHref("Chicken burger with French fries", "Please advise", false, "");
-  const vegHref = createWhatsAppHref("Veg sandwich", "Please advise", false, "");
+function CounterCategoryCard({ item, index }: { item: CounterCategory; index: number }) {
+  const href = createWhatsAppHref(item.name, "Please advise", false, "");
 
+  return (
+    <article
+      className={`category-card reveal ${index === 0 ? "category-card-featured" : ""}`}
+      style={{ transitionDelay: `${index * 70}ms` }}
+      data-testid={`counter-category-${item.id}`}
+    >
+      <div className="category-card-top">
+        <span>{item.marker}</span>
+        <MessageCircle size={18} />
+      </div>
+      <h3>{item.name}</h3>
+      <p>{item.description}</p>
+      <a href={href} target="_blank" rel="noreferrer" data-testid={`counter-category-order-${item.id}`}>
+        Ask on WhatsApp <ArrowUpRight size={16} />
+      </a>
+    </article>
+  );
+}
+
+function MenuSection() {
   return (
     <section className="menu-section section" id="menu" data-testid="signature-menu-section">
       <div className="page-width">
         <div className="section-intro section-intro-wide reveal">
           <span className="eyebrow">From the counter</span>
-          <h2 className="section-title">Find your favourite kind of sweet.</h2>
+          <h2 className="section-title">Find your favourite thing today.</h2>
           <p className="section-lede">
-            Start with the classics, then ask what is fresh today. For custom cakes and exact availability, send the bakery a message before you visit.
+            Start with the classics, then scan the everyday counter. For exact availability or a custom cake, send the bakery a message before you visit.
           </p>
         </div>
         <div className="menu-grid">
           {menuItems.map((item, index) => <MenuCard item={item} index={index} key={item.id} />)}
         </div>
-        <div className="savoury-strip reveal">
-          <article className="savoury-card" data-testid="menu-highlight-chicken-burger">
-            <div className="savoury-icon"><Utensils size={20} /></div>
-            <div>
-              <span className="eyebrow eyebrow-small">Menu highlight</span>
-              <h3>Chicken burger with French fries</h3>
-            </div>
-            <a href={chickenHref} target="_blank" rel="noreferrer" data-testid="menu-highlight-chicken-burger-order-btn">Enquire <ArrowUpRight size={16} /></a>
-          </article>
-          <article className="savoury-card" data-testid="menu-highlight-veg-sandwiches">
-            <div className="savoury-icon"><Heart size={20} /></div>
-            <div>
-              <span className="eyebrow eyebrow-small">Menu highlight</span>
-              <h3>Veg sandwiches</h3>
-            </div>
-            <a href={vegHref} target="_blank" rel="noreferrer" data-testid="menu-highlight-veg-sandwiches-order-btn">Enquire <ArrowUpRight size={16} /></a>
-          </article>
+        <div className="category-heading reveal">
+          <div>
+            <span className="eyebrow">Everyday favourites</span>
+            <h3>Something for the in-between moments.</h3>
+          </div>
+          <span className="category-heading-note">Ask about today's availability</span>
+        </div>
+        <div className="category-grid">
+          {counterCategories.map((item, index) => <CounterCategoryCard item={item} index={index} key={item.id} />)}
         </div>
       </div>
     </section>
@@ -423,8 +455,13 @@ function OrderStudio() {
               <option>Chocolate cake</option>
               <option>Vanilla berry cake</option>
               <option>Pastries or sweets</option>
-              <option>Chicken burger with French fries</option>
-              <option>Veg sandwich</option>
+              <option>Juices</option>
+              <option>Tea</option>
+              <option>Snacks</option>
+              <option>Puffs</option>
+              <option>Cold drinks</option>
+              <option>Chocolates</option>
+              <option>Chaat</option>
             </select>
           </label>
           <label className="form-field" htmlFor="cake-size">

@@ -1,7 +1,7 @@
 # Cake World Bakery Website PRD
 
 ## Problem statement
-Build a premium, warm, conversion-focused website for Cake World Bakery in Muddanahalli, Bengaluru using the supplied local listing details: bakery and cake shop, 3.7 rating from 75 reviews, takeaway, address 416 Singanayakanahalli, Sree Sai Layout, Bengaluru, Muddanahalli, Karnataka 560119, listed closing time 10:30 pm, price range ₹1–200 per person, phone 063627 93729, and menu highlights Chicken Burger with French Fries and Veg Sandwiches.
+Build a premium, warm, conversion-focused website for Cake World Bakery in Muddanahalli, Bengaluru using the supplied local listing details: bakery and cake shop, 3.7 rating from 75 reviews, takeaway, address 416 Singanayakanahalli, Sree Sai Layout, Bengaluru, Muddanahalli, Karnataka 560119, listed closing time 10:30 pm, price range ₹1–200 per person, phone 063627 93729, and current counter categories including Juices, Tea, Snacks, Puffs, Cold Drinks, Chocolates and Chaat.
 
 ## Architecture
 - React 19 + TypeScript + Vite single-page site with a single Home route.
@@ -45,8 +45,15 @@ Build a premium, warm, conversion-focused website for Cake World Bakery in Mudda
 - Add Kannada and English content toggle for a more local visitor experience.
 - Add optional delivery areas and an embedded map once the bakery confirms service coverage.
 
+## Feature addition 2026-09-01
+- Added seven current-counter categories to the menu: Juices, Tea, Snacks, Puffs, Cold Drinks, Chocolates and Chaat.
+- Removed Chicken burger with French fries and Veg sandwiches from the marquee, menu highlights and cake enquiry selector.
+- Each new category has a polished counter card and its own prefilled WhatsApp “Ask on WhatsApp” action using +91 63627 93729.
+- Added the seven categories to the cake enquiry selector so customers can also include them in a WhatsApp brief.
+- The category descriptions are placeholder copy and no prices were supplied; both remain MOCKED until the bakery confirms them.
+- Verified `yarn build`, seven category actions, no old item mentions in the rendered page, and final desktop/mobile layout checks.
+
 ## Next tasks
 1. Gather approved bakery photos and replace the generated image URLs.
-2. Validate the menu and pricing copy with the bakery owner.
+2. Validate the current category descriptions, prices and availability with the bakery owner.
 3. Decide whether the WhatsApp enquiry is enough or needs a connected ordering system.
-
