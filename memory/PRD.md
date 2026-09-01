@@ -78,6 +78,11 @@ Build a premium, warm, conversion-focused website for Cake World Bakery in Mudda
 - Both actions use the existing Google Maps directions URL built from the supplied bakery address.
 - Verified the directions action is visible before the WhatsApp action on desktop and available in the open mobile menu without broken images or horizontal overflow.
 
+## Feature fix 2026-09-01 — mobile header directions
+- Reduced the mobile header brand and action spacing so the Directions button shifts left and remains fully visible beside the menu button.
+- Kept the desktop header arrangement unchanged and preserved the mobile navigation Directions action.
+- Verified the mobile Directions button fits without text clipping, sits before the hamburger, and creates no horizontal overflow.
+
 ## Next tasks
 1. Gather approved bakery photos and replace the generated image URLs.
 2. Validate the current category descriptions, prices and availability with the bakery owner.

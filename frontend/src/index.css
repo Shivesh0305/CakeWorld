@@ -2618,3 +2618,37 @@ html {
   color: var(--accent);
 }
 
+
+@media (max-width: 700px) {
+  .header-inner {
+    gap: 0.5rem;
+  }
+
+  .brand-link {
+    min-width: 0;
+    gap: 0.5rem;
+  }
+
+  .brand-logo {
+    width: 42px;
+    height: 42px;
+    flex-basis: 42px;
+  }
+
+  .brand-name {
+    font-size: 1.45rem;
+  }
+
+  .header-actions {
+    flex: 0 0 auto;
+    gap: 0.4rem;
+  }
+
+  .header-directions-link {
+    min-height: 38px;
+    padding: 0.55rem 0.65rem;
+    font-size: 0.6rem;
+    white-space: nowrap;
+  }
+}
+
