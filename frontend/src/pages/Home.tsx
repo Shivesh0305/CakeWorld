@@ -237,8 +237,11 @@ function Header({ isOpen, onToggle, onClose }: { isOpen: boolean; onToggle: () =
     <header className="site-header" data-testid="main-navigation-bar">
       <div className="header-inner">
         <a className="brand-link" href="#home" data-testid="brand-logo-link" onClick={onClose}>
-          <span className="brand-name">Cake World<span>.</span></span>
-          <span className="brand-subtitle">Bakery · Bengaluru</span>
+          <img className="brand-logo" src="https://customer-assets-cm19k8pv.emergentagent.net/job_pastry-paradise-178/artifacts/6gq4l6zx_image.png" alt="Cake World Bakery logo" data-testid="bakery-logo" />
+          <span className="brand-lockup">
+            <span className="brand-name">Cake World<span>.</span></span>
+            <span className="brand-subtitle">Bakery · Bengaluru</span>
+          </span>
         </a>
         <nav className="desktop-nav" aria-label="Main navigation">
           {navLinks.map((link) => (

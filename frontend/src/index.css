@@ -98,8 +98,22 @@ img {
 
 .brand-link {
   display: inline-flex;
-  flex-direction: column;
   flex: 0 0 auto;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.brand-logo {
+  width: 48px;
+  height: 48px;
+  flex: 0 0 48px;
+  border-radius: 50%;
+  object-fit: contain;
+}
+
+.brand-lockup {
+  display: flex;
+  flex-direction: column;
 }
 
 .brand-name,
