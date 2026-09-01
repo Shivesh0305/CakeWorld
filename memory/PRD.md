@@ -83,6 +83,11 @@ Build a premium, warm, conversion-focused website for Cake World Bakery in Mudda
 - Kept the desktop header arrangement unchanged and preserved the mobile navigation Directions action.
 - Verified the mobile Directions button fits without text clipping, sits before the hamburger, and creates no horizontal overflow.
 
+## Feature fix 2026-09-01 — mobile hamburger positioning
+- Tightened the smallest mobile header layout so the hamburger button shifts left with the Directions action and stays fully inside narrow screens.
+- Preserved the larger mobile layout and desktop header arrangement, including the logo, Directions action and WhatsApp action.
+- Verified the hamburger and Directions controls remain separate, fully visible and inside the viewport at 320px and 390px widths.
+
 ## Next tasks
 1. Gather approved bakery photos and replace the generated image URLs.
 2. Validate the current category descriptions, prices and availability with the bakery owner.

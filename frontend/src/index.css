@@ -2652,3 +2652,63 @@ html {
   }
 }
 
+
+@media (max-width: 700px) {
+  .header-actions {
+    margin-right: 0.5rem;
+  }
+}
+
+
+@media (max-width: 360px) {
+  .page-width,
+  .header-inner {
+    width: calc(100% - 24px);
+  }
+
+  .header-inner {
+    gap: 0.25rem;
+  }
+
+  .brand-link {
+    gap: 0.3rem;
+  }
+
+  .brand-logo {
+    width: 34px;
+    height: 34px;
+    flex-basis: 34px;
+  }
+
+  .brand-name {
+    font-size: 1.18rem;
+  }
+
+  .brand-subtitle {
+    font-size: 0.46rem;
+    letter-spacing: 0.12em;
+  }
+
+  .header-actions {
+    gap: 0.25rem;
+    margin-right: 0.25rem;
+  }
+
+  .header-directions-link {
+    min-height: 34px;
+    gap: 0.25rem;
+    padding: 0.45rem 0.48rem;
+    font-size: 0.52rem;
+  }
+
+  .header-directions-link svg {
+    width: 13px;
+    height: 13px;
+  }
+
+  .mobile-menu-toggle {
+    width: 36px;
+    height: 36px;
+  }
+}
+
