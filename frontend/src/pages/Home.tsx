@@ -252,6 +252,15 @@ function Header({ isOpen, onToggle, onClose }: { isOpen: boolean; onToggle: () =
         </nav>
         <div className="header-actions">
           <a
+            className="header-directions-link"
+            href={MAPS_URL}
+            target="_blank"
+            rel="noreferrer"
+            data-testid="nav-directions-cta"
+          >
+            <MapPin size={15} strokeWidth={1.8} /> Directions
+          </a>
+          <a
             className="header-order-link"
             href={createWhatsAppHref("a birthday cake", "Please advise", false, "")}
             target="_blank"
@@ -284,6 +293,16 @@ function Header({ isOpen, onToggle, onClose }: { isOpen: boolean; onToggle: () =
             <ChevronRight size={16} />
           </a>
         ))}
+        <a
+          className="mobile-nav-directions"
+          href={MAPS_URL}
+          target="_blank"
+          rel="noreferrer"
+          data-testid="mobile-nav-directions-cta"
+          onClick={onClose}
+        >
+          Directions <MapPin size={16} />
+        </a>
         <a
           className="mobile-nav-order"
           href={createWhatsAppHref("a birthday cake", "Please advise", false, "")}
