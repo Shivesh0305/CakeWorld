@@ -53,6 +53,11 @@ Build a premium, warm, conversion-focused website for Cake World Bakery in Mudda
 - The category descriptions are placeholder copy and no prices were supplied; both remain MOCKED until the bakery confirms them.
 - Verified `yarn build`, seven category actions, no old item mentions in the rendered page, and final desktop/mobile layout checks.
 
+## Feature addition 2026-09-01 — category photography
+- Added seven generated editorial food images for Juices, Tea, Snacks, Puffs, Cold Drinks, Chocolates and Chaat.
+- Reworked the new categories into the same image-first card treatment as the existing cake menu, while keeping everything inside the original Menu section.
+- Verified all seven category images loaded in the browser, each category retained its WhatsApp action, and the new mobile grid stays single-column without overlap.
+
 ## Next tasks
 1. Gather approved bakery photos and replace the generated image URLs.
 2. Validate the current category descriptions, prices and availability with the bakery owner.

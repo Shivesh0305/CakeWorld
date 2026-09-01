@@ -125,16 +125,67 @@ type CounterCategory = {
   name: string;
   description: string;
   marker: string;
+  image: string;
+  alt: string;
 };
 
 const counterCategories: CounterCategory[] = [
-  { id: "juices", name: "Juices", description: "Bright, refreshing pours for a quick lift or a slow afternoon.", marker: "01" },
-  { id: "tea", name: "Tea", description: "A familiar hot cup for the pause between one thing and the next.", marker: "02" },
-  { id: "snacks", name: "Snacks", description: "Easy bakery-counter bites when you want something savoury.", marker: "03" },
-  { id: "puffs", name: "Puffs", description: "Flaky, warm and made for the first bite on the way home.", marker: "04" },
-  { id: "cold-drinks", name: "Cold drinks", description: "Chilled favourites to pair with a pastry, puff or chaat.", marker: "05" },
-  { id: "chocolates", name: "Chocolates", description: "A little cocoa comfort, wrapped up for gifting or keeping.", marker: "06" },
-  { id: "chaat", name: "Chaat", description: "Tangy, crunchy and full of the kind of flavour that wakes you up.", marker: "07" },
+  {
+    id: "juices",
+    name: "Juices",
+    description: "Bright, refreshing pours for a quick lift or a slow afternoon.",
+    marker: "01",
+    image: "https://static.prod-images.emergentagent.com/jobs/97bc0cba-d75d-4760-9020-70de12137d5a/images/356b1c9c3a5221d620e7f3676606efb7bbf131d927d9c7000f8306141a3e5728.jpeg",
+    alt: "Fresh orange juice on a bakery counter",
+  },
+  {
+    id: "tea",
+    name: "Tea",
+    description: "A familiar hot cup for the pause between one thing and the next.",
+    marker: "02",
+    image: "https://static.prod-images.emergentagent.com/jobs/97bc0cba-d75d-4760-9020-70de12137d5a/images/d6c2dc69c7800506853f8869241303f8fe3a4e0d81132054726a4cea294bb027.jpeg",
+    alt: "Steaming Indian tea in a glass",
+  },
+  {
+    id: "snacks",
+    name: "Snacks",
+    description: "Easy bakery-counter bites when you want something savoury.",
+    marker: "03",
+    image: "https://static.prod-images.emergentagent.com/jobs/97bc0cba-d75d-4760-9020-70de12137d5a/images/de8506b20ef1cef019639d9fea59992701bb86e2cadc5dc4951bdd904e0702f3.jpeg",
+    alt: "Assorted savoury bakery snacks on a plate",
+  },
+  {
+    id: "puffs",
+    name: "Puffs",
+    description: "Flaky, warm and made for the first bite on the way home.",
+    marker: "04",
+    image: "https://static.prod-images.emergentagent.com/jobs/97bc0cba-d75d-4760-9020-70de12137d5a/images/1e6d28b50b266ad6889ecab5f0d3c0d96df670580381eea4f577b161f44c92ec.jpeg",
+    alt: "Golden flaky vegetable puffs",
+  },
+  {
+    id: "cold-drinks",
+    name: "Cold drinks",
+    description: "Chilled favourites to pair with a pastry, puff or chaat.",
+    marker: "05",
+    image: "https://static.prod-images.emergentagent.com/jobs/97bc0cba-d75d-4760-9020-70de12137d5a/images/fbdcd95bc47e7401ed99f29015040f684dbfcb47663406709ac5ea4a87f3eb54.jpeg",
+    alt: "Chilled lemon soda with ice and citrus",
+  },
+  {
+    id: "chocolates",
+    name: "Chocolates",
+    description: "A little cocoa comfort, wrapped up for gifting or keeping.",
+    marker: "06",
+    image: "https://static.prod-images.emergentagent.com/jobs/97bc0cba-d75d-4760-9020-70de12137d5a/images/7e7889a38a0e11cab2697987a1e9b70498228a09560ca3e70d463d3fa10ab941.jpeg",
+    alt: "Handmade chocolate truffles on a plate",
+  },
+  {
+    id: "chaat",
+    name: "Chaat",
+    description: "Tangy, crunchy and full of the kind of flavour that wakes you up.",
+    marker: "07",
+    image: "https://static.prod-images.emergentagent.com/jobs/97bc0cba-d75d-4760-9020-70de12137d5a/images/aef9f88f5600ba746e764fb6bdc352670b620e98d0b2acf9a60b3f8a13ef41d1.jpeg",
+    alt: "Colorful Indian chaat with sev and chutney",
+  },
 ];
 
 
@@ -379,15 +430,21 @@ function CounterCategoryCard({ item, index }: { item: CounterCategory; index: nu
       style={{ transitionDelay: `${index * 70}ms` }}
       data-testid={`counter-category-${item.id}`}
     >
-      <div className="category-card-top">
-        <span>{item.marker}</span>
-        <MessageCircle size={18} />
+      <div className="category-image-wrap">
+        <img src={item.image} alt={item.alt} className="category-image" />
+        <span className="category-image-index">{item.marker}</span>
       </div>
-      <h3>{item.name}</h3>
-      <p>{item.description}</p>
-      <a href={href} target="_blank" rel="noreferrer" data-testid={`counter-category-order-${item.id}`}>
-        Ask on WhatsApp <ArrowUpRight size={16} />
-      </a>
+      <div className="category-card-body">
+        <div className="category-card-meta">
+          <span>Counter pick</span>
+          <span>Ask today</span>
+        </div>
+        <h3>{item.name}</h3>
+        <p>{item.description}</p>
+        <a href={href} target="_blank" rel="noreferrer" data-testid={`counter-category-order-${item.id}`}>
+          <MessageCircle size={15} /> Ask on WhatsApp <ArrowUpRight size={16} />
+        </a>
+      </div>
     </article>
   );
 }
