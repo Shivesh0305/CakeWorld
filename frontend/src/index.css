@@ -2265,7 +2265,7 @@ img {
   min-width: 0;
   min-height: 17rem;
   flex-direction: column;
-  grid-column: span 3;
+  grid-column: span 6;
   padding: clamp(1.25rem, 2.5vw, 2rem);
   background: var(--ink);
   color: var(--bg);
@@ -2275,12 +2275,6 @@ img {
 .category-card:nth-child(2),
 .category-card:nth-child(6) {
   background: var(--accent);
-}
-
-.category-card:nth-child(5),
-.category-card:nth-child(6),
-.category-card:nth-child(7) {
-  grid-column: span 4;
 }
 
 .category-card::after {

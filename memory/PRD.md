@@ -62,6 +62,11 @@ Build a premium, warm, conversion-focused website for Cake World Bakery in Mudda
 - Updated the Tea and Chocolates category cards to use the same dark ink headings, muted body copy and dark action text as Juices and Snacks.
 - Verified their computed heading, body and WhatsApp action colors match the neighbouring category cards and both cards keep the cream surface.
 
+## Feature fix 2026-09-01 — category card sizing
+- Updated the seven new menu category cards to use the same two-column, image-first scale as the existing menu cards on desktop.
+- Kept the category cards as full-width single-column cards on mobile for readable text, consistent image proportions and easy scrolling.
+- Verified all seven category cards have equal widths at each viewport, all seven images load, and all seven WhatsApp actions remain available.
+
 ## Next tasks
 1. Gather approved bakery photos and replace the generated image URLs.
 2. Validate the current category descriptions, prices and availability with the bakery owner.
