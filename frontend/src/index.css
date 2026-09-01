@@ -2549,3 +2549,26 @@ html {
   }
 }
 
+
+.category-card:nth-child(2),
+.category-card:nth-child(6) {
+  background: var(--surface);
+  color: var(--ink);
+}
+
+.category-card:nth-child(2) .category-card-top,
+.category-card:nth-child(6) .category-card-top {
+  color: var(--accent);
+}
+
+.category-card:nth-child(2) .category-card-body p,
+.category-card:nth-child(6) .category-card-body p {
+  color: var(--muted);
+}
+
+.category-card:nth-child(2) .category-card-body a,
+.category-card:nth-child(6) .category-card-body a {
+  border-color: var(--accent);
+  color: var(--ink);
+}
+
