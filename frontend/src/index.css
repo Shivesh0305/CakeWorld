@@ -2761,3 +2761,36 @@ html {
   }
 }
 
+
+.brand-lockup {
+  min-width: 0;
+}
+
+.brand-tagline {
+  display: block;
+  margin-top: 0.28rem;
+  color: var(--accent);
+  font-size: 0.48rem;
+  font-weight: 750;
+  letter-spacing: 0.045em;
+  line-height: 1.1;
+}
+
+.brand-tagline + .brand-subtitle {
+  margin-top: 0.18rem;
+}
+
+@media (max-width: 700px) {
+  .brand-tagline {
+    font-size: 0.42rem;
+    letter-spacing: 0.035em;
+  }
+}
+
+@media (max-width: 360px) {
+  .brand-tagline {
+    font-size: 0.34rem;
+    letter-spacing: 0.02em;
+  }
+}
+

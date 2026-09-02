@@ -94,6 +94,11 @@ Build a premium, warm, conversion-focused website for Cake World Bakery in Mudda
 - The delivery promise is based on the information supplied by the bakery owner and should be confirmed before public launch.
 - Verified the badge renders at desktop and mobile sizes with no text clipping, broken images or horizontal overflow.
 
+## Feature addition 2026-09-02 — brand tagline
+- Added “Baked With Best Ingredients” immediately under the Cake World name in the header while retaining the Bakery · Bengaluru line below it.
+- Sized the tagline for desktop, mobile and narrow mobile headers so it stays readable without pushing Directions or the hamburger button out of view.
+- Verified the tagline is visible at desktop and mobile sizes with no clipped text, broken images or horizontal overflow.
+
 ## Next tasks
 1. Gather approved bakery photos and replace the generated image URLs.
 2. Validate the current category descriptions, prices, delivery coverage and availability with the bakery owner.
