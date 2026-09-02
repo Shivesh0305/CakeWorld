@@ -344,6 +344,10 @@ function Hero() {
               <Phone size={17} /> Call the bakery
             </a>
           </div>
+          <div className="hero-delivery-note" data-testid="free-delivery-banner">
+            <span className="delivery-note-icon"><MapPin size={16} /></span>
+            <span className="delivery-note-copy"><strong>Free delivery within 4 km</strong><small>Bring the celebration closer.</small></span>
+          </div>
           <div className="hero-footnote">
             <span><Heart size={14} fill="currentColor" /> Made for the people you love</span>
             <a href="#menu" data-testid="hero-scroll-menu-link">See the menu <ArrowDown size={15} /></a>

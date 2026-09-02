@@ -88,7 +88,13 @@ Build a premium, warm, conversion-focused website for Cake World Bakery in Mudda
 - Preserved the larger mobile layout and desktop header arrangement, including the logo, Directions action and WhatsApp action.
 - Verified the hamburger and Directions controls remain separate, fully visible and inside the viewport at 320px and 390px widths.
 
+## Feature addition 2026-09-02 — delivery promise
+- Added an accent delivery badge below the hero actions reading “Free delivery within 4 km” with a supporting nearby-orders message.
+- Kept the notice visible and readable on desktop and mobile without changing the header or menu layout.
+- The delivery promise is based on the information supplied by the bakery owner and should be confirmed before public launch.
+- Verified the badge renders at desktop and mobile sizes with no text clipping, broken images or horizontal overflow.
+
 ## Next tasks
 1. Gather approved bakery photos and replace the generated image URLs.
-2. Validate the current category descriptions, prices and availability with the bakery owner.
+2. Validate the current category descriptions, prices, delivery coverage and availability with the bakery owner.
 3. Decide whether the WhatsApp enquiry is enough or needs a connected ordering system.
